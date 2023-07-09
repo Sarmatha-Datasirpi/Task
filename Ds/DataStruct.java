@@ -18,31 +18,31 @@ public static void main(String args[])
         sum+=a[i];
     }
     System.out.println("Sum of your array : "+ sum);
-    LinkedList<Integer> lst=new LinkedList<>();
-    lst.add(1);
-    lst.add(2);
-    lst.add(3);
-    lst.add(4);
-    lst.add(5);
-    Stack<Integer> stk=new Stack<>();
+    LinkedList<Integer> list1=new LinkedList<>();
+    list1.add(1);
+    list1.add(2);
+    list1.add(3);
+    list1.add(4);
+    list1.add(5);
+    Stack<Integer> stack2=new Stack<>();
     for(i=4;i>=0;i--)
     {
-        stk.push(lst.get(i));
+        stack2.push(list1.get(i));
     }
-    Queue<Integer> que=new LinkedList<>();
-    for(i=0;i<lst.size();i+=2)
+    Queue<Integer> queue1=new LinkedList<>();
+    for(i=0;i<list1.size();i+=2)
     {
-        que.add(lst.get(i));
+        queue1.add(list1.get(i));
     
     }
     Map<Integer,Integer> map=new HashMap<>();
     for(i=1;i<5;i+=2)
     {
-        map.put(i,lst.get(i));
+        map.put(i,list1.get(i));
     }
-    System.out.println("Linked List : " + lst);
-    System.out.println("Stack : " + stk);
-    System.out.println("Queue : " + que);
+    System.out.println("Linked List : " + list1);
+    System.out.println("Stack : " + stack2);
+    System.out.println("Queue : " + queue1);
     System.out.println("Map : " + map);
     System.out.println();
     obj.close();
