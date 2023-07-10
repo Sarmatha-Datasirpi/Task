@@ -4,9 +4,9 @@ class Greeting:
             print("Hello")
         else:
             print("Hello", name)
-greeting = Greeting()
-greeting.greet() 
-greeting.greet("Sansa")
+g1 = Greeting()
+g1.greet() 
+g1.greet("Sansa")
 
 
 class Store:                              #public getter and setter methods to the Store class so its variables can be accessed by . other classes
@@ -21,11 +21,11 @@ class Store:                              #public getter and setter methods to t
         return self._address
     def set_address(self, address):
         self._address = address
-store = Store("DataSirpi Company", "123 Main St")
+store = Store("Velavan Store", "123 Main Road")
 print("Store Name:", store.get_name())
 print("Store Address:", store.get_address())
-store.set_name("XYZ Store")
-store.set_address("456 Elm St")
+store.set_name("Hyper Market Store")
+store.set_address("7th floor")
 print("New Store Name:", store.get_name())
 print("New Store Address:", store.get_address())
 
@@ -33,19 +33,19 @@ print("New Store Address:", store.get_address())
 
 class Animal:        #Multilevel inheritance access from the super parent class
     def eat(self):
-        print("cat is eating...")
+        print("Cow and Goat are eating...")
 
-class cat(Animal):
+class Cow(Animal):
     def walk(self):
-        print("cat is waliking...")
+        print("Cow is walking...")
 
-class dog(cat):
+class Goat(Cow):
     def sleep(self):
-        print("dog is sleeping...")
-Dog = dog()
-Dog.eat()
-Dog.walk()
-Dog.sleep()
+        print("Goat is sleeping...")
+goat = Goat()
+goat.eat()
+goat.walk()
+goat.sleep()
 
 
 class Account:
@@ -64,10 +64,10 @@ class Account:
     def transferTo(self, another_account, amount):
         self.debit(amount)
         another_account.credit(amount)
-account1 = Account("123456")
-account2 = Account("789012", balance=100)
-account1.credit(500)
-account1.debit(100)
+account1 = Account("9836364")
+account2 = Account("8324612", balance=100)
+account1.credit(1000)
+account1.debit(500)
 account2.transferTo(account1, 50)
 print("Account 1 balance:", account1.balance)
 print("Account 2 balance:", account2.balance)
@@ -76,20 +76,20 @@ print("Account 2 balance:", account2.balance)
 
 
 from abc import ABC, abstractmethod   #abstract parent class with abstract methods and create a child class that extends parent class.
-class Animal(ABC):
+class Birds(ABC):
     @abstractmethod    
     def speak(self):
         pass
-class Dog(Animal):
+class Parrot(Birds):
     def speak(self):
-        return "Woof!"
-class Cat(Animal):
+        return "KIKI!"
+class Dove(Birds):
     def speak(self):
-        return "Meow!"
-dog = Dog()
-cat = Cat()
-print(dog.speak())
-print(cat.speak()) 
+        return "KUNU!"
+p1 = Parrot()
+d1= Dove()
+print(p1.speak())
+print(d1.speak()) 
 
 
 
