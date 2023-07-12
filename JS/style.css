@@ -1,0 +1,56 @@
+body {
+    padding-left: 500px;
+    padding-top: 200px;
+}
+
+.firstnumber {
+    padding-top: 10px;
+    margin-left: 106px;
+}
+
+.operation {
+    padding-top: 15px;
+    margin-left: 106px;
+}
+
+.secondnumber {
+    padding-top: 15px;
+    margin-left: 106px;
+}
+
+.calculate {
+    margin-top: 40px;
+    margin-left: 200px;
+    padding: 13px;
+}
+
+.container {
+    background-color: black;
+    width: 500px;
+}
+
+.number1label {
+    color: rgb(248, 239, 239);
+}
+
+.number2label {
+    color: rgb(248, 239, 239);
+}
+
+.calculmain {
+    margin-left: 114px;
+}
+
+.operation {
+    margin-left: 240px;
+}
+
+#result {
+    color: rgb(248, 239, 239);
+}
+
+.reset {
+    margin-top: 40px;
+    margin-left: 215px;
+    padding: 13px;
+}
